@@ -3,3 +3,5 @@ variables_and_constants
 explicit_types
 type_coercion
 string_interpolation
+range_operator
+inclusive_range_operator

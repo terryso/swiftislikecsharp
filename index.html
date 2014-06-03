@@ -140,6 +140,70 @@ val fruitSummary = s&quot;I have ${apples + oranges} &quot; +
               </div>
             </div>
           </div>
+          <div id="range_operator" class="comparison">
+            <h3><a href="#range_operator">Range Operator</a></h3>
+            <div data-browser="swift" class="browser swift">
+              <h4>SWIFT</h4>
+              <div data-lang="scala" class="code-block language-scala">
+                <pre><code>let names = [&quot;Anna&quot;, &quot;Alex&quot;, &quot;Brian&quot;, &quot;Jack&quot;]
+let count = names.count
+for i in 0..count {
+    println(&quot;Person \(i + 1) is called \(names[i])&quot;)
+}
+// Person 1 is called Anna
+// Person 2 is called Alex
+// Person 3 is called Brian
+// Person 4 is called Jack
+</code></pre>
+              </div>
+            </div>
+            <div data-browser="scala" class="browser scala">
+              <h4>SCALA</h4>
+              <div data-lang="scala" class="code-block language-scala">
+                <pre><code>val names = Array(&quot;Anna&quot;, &quot;Alex&quot;, &quot;Brian&quot;, &quot;Jack&quot;)
+val count = names.length
+for (i &lt;- 0 until count) {
+    println(s&quot;Person ${i + 1} is called ${names(i)}&quot;)
+}
+// Person 1 is called Anna
+// Person 2 is called Alex
+// Person 3 is called Brian
+// Person 4 is called Jack
+</code></pre>
+              </div>
+            </div>
+          </div>
+          <div id="inclusive_range_operator" class="comparison">
+            <h3><a href="#inclusive_range_operator">Inclusive Range Operator</a></h3>
+            <div data-browser="swift" class="browser swift">
+              <h4>SWIFT</h4>
+              <div data-lang="scala" class="code-block language-scala">
+                <pre><code>for index in 1...5 {
+    println(&quot;\(index) times 5 is \(index * 5)&quot;)
+}
+// 1 times 5 is 5
+// 2 times 5 is 10
+// 3 times 5 is 15
+// 4 times 5 is 20
+// 5 times 5 is 25
+</code></pre>
+              </div>
+            </div>
+            <div data-browser="scala" class="browser scala">
+              <h4>SCALA</h4>
+              <div data-lang="scala" class="code-block language-scala">
+                <pre><code>for (index &lt;- 1 to 5) {
+    println(s&quot;$index times 5 is ${index * 5}&quot;)
+}
+// 1 times 5 is 5
+// 2 times 5 is 10
+// 3 times 5 is 15
+// 4 times 5 is 20
+// 5 times 5 is 25
+</code></pre>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section id="collections">
