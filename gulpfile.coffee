@@ -22,6 +22,7 @@ fullLanguage = (ext) ->
   LANGS =
     js: 'javascript'
     css: 'css'
+    scala: 'scala'
 
   LANGS[ext]
 

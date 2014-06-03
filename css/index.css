@@ -162,6 +162,11 @@ header.page-header .inner h1 {
     clear: left;
     margin-right: 2%;
   }
+  .browser.swift {
+    float: left;
+    clear: left;
+    margin-right: 2%;
+  }
 }
 .old-ie-message {
   display: none;
