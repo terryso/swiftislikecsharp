@@ -9,25 +9,30 @@ get = (cb) ->
       return
 
     out = {}
+    order = ""
 
     for title, comps of tree
-      out[title] = {}
+      if title is 'order.txt'
+        order = comps.trim().split('\n')
+      else
+        out[title] = {}
+        for name, comp of comps
+          if name is 'alternatives.txt'
+            name = '_alternatives'
+          if name is 'order.txt'
+            name = '_order'
 
-      for name, comp of comps
-        if name is 'alternatives.txt'
-          name = '_alternatives'
+          out[title][name] = {}
 
-        out[title][name] = {}
+          if typeof comp isnt 'string'
+            for filename, code of comp
+              [version, ext] = filename.split '.'
 
-        if typeof comp isnt 'string'
-          for filename, code of comp
-            [version, ext] = filename.split '.'
+              out[title][name][version] ?= {}
+              out[title][name][version][ext] = code
+          else
+            out[title][name] = comp
 
-            out[title][name][version] ?= {}
-            out[title][name][version][ext] = code
-        else
-          out[title][name] = comp
-
-    cb null, out
+    cb null, out, order
 
 module.exports = get

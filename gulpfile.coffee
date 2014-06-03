@@ -37,17 +37,22 @@ gulp.task 'stylus', ->
     .pipe(gulp.dest('./css/'))
 
 gulp.task 'jade', ->
-  readTree (err, comparisons) ->
+  readTree (err, comparisons, order) ->
     if err
       console.error "Error loading comparisons tree", err
       return
 
     comps = []
-    for title, comparison of comparisons
+
+    for title in order
+      comparison = comparisons[title]
       comps.push {title, comparison}
 
-    comps.sort (a, b) ->
-      a.title.localeCompare b.title
+    #for title, comparison of comparisons
+    #  comps.push {title, comparison}
+    #
+    #comps.sort (a, b) ->
+    #  a.title.localeCompare b.title
 
     gulp.src('./jade/**/index.jade')
       .pipe(jade({pretty: true, data: {comparisons: comps, titleCase, getNamePart, fullLanguage}}))

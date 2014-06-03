@@ -1,0 +1,8 @@
+functions
+tuple_return
+variable_number_of_arguments
+function_type
+map
+sort
+named_arguments
+

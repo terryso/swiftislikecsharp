@@ -57,7 +57,17 @@ body
             if comp.comparison._alternatives
               +alternatives(comp.comparison._alternatives)
 
-            for co, name in comp.comparison
+            - keys = []
+            if comp.comparison._order
+              - keys = comp.comparison._order.trim().split('\n')
+            else
+              - keys = Object.keys(comp.comparison)
+
+            -//for co, name in comp.comparison
+            -//  - console.log("name " + name)
+            -//  - console.log(co)
+            for name in keys
+              - co = comp.comparison[name]
               - if (name[0] === '_') continue;
 
               .comparison(id=name.replace(' ', '-').toLowerCase())
