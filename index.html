@@ -401,7 +401,7 @@ numbers.map({ number in 3 * number })
               <h4>SCALA</h4>
               <div data-lang="scala" class="code-block language-scala">
                 <pre><code>var numbers = Array(20, 19, 7, 12)
-numbers.map({ number =&gt; 3 * number })
+numbers.map( number =&gt; 3 * number )
 </code></pre>
               </div>
             </div>
@@ -533,7 +533,8 @@ class Square: NamedShape {
     }
 
     override func simpleDescription() -&gt; String {
-        return &quot;A square with sides of length \(sideLength).&quot;
+        return &quot;A square with sides of length
+                \(sideLength).&quot;
     }
 }
 
@@ -549,25 +550,17 @@ test.simpleDescription()
                 <pre><code>class NamedShape(var name: String) {
     var numberOfSides: Int = 0
 
-    def simpleDescription(): String = {
-        return s&quot;A shape with $numberOfSides sides.&quot;
-    }
+    def simpleDescription() =
+        s&quot;A shape with $numberOfSides sides.&quot;
 }
 
 class Square(var sideLength: Double, name: String)
     extends NamedShape(name) {
-    def area(): Double = {
-        return sideLength * sideLength
-    }
+    numberOfSides = 4
+    def area() = sideLength * sideLength
 
-    def Square(sideLength: Double, name: String) = {
-        this.sideLength = sideLength
-        numberOfSides = 4
-    }
-
-    override def simpleDescription(): String = {
-        return s&quot;A square with sides of length $sideLength.&quot;
-    }
+    override def simpleDescription() =
+        s&quot;A square with sides of length $sideLength.&quot;
 }
 
 val test = new Square(5.2, &quot;my test square&quot;)
