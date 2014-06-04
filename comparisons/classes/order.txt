@@ -1,3 +1,7 @@
 declaration
 usage
 subclass
+checking_type
+downcasting
+protocol
+extensions

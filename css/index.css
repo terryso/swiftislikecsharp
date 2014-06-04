@@ -382,6 +382,21 @@ input[type='range']::-webkit-slider-thumb {
 .range-label:last-of-type {
   text-align: right;
 }
+.changelog {
+  zoom: 1;
+  width: 40em;
+  padding: 0 1em;
+  margin: auto;
+  font-size: 0.8em;
+}
+.changelog:before,
+.changelog:after {
+  content: "";
+  display: table;
+}
+.changelog:after {
+  clear: both;
+}
 footer {
   margin: 3em auto;
   font-size: 1.4em;
