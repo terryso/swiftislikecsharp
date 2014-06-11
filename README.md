@@ -1,1 +1,1 @@
-Code comparison of Swift and Scala.
+Code comparison of Swift and C#.
