@@ -1,0 +1,4 @@
+public int sumOf(params int[] numbers) {
+    return numbers.Sum();
+}
+sumOf(42, 597, 12)

@@ -1,0 +1,2 @@
+var numbers = new[] {20, 19, 7, 12};
+numbers.Select(number => 3 * number);

@@ -1,0 +1,2 @@
+var list = new List<int> {1, 5, 3, 12, 2};
+list.Sort((x, y) => Convert.ToInt32((x > y)));

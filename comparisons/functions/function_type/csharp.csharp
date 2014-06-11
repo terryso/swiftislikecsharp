@@ -1,0 +1,6 @@
+public Func<int, int> makeIncrementer() {
+    Func<int, int> addOne = number => 1 + number;
+    return addOne;
+}
+var increment = makeIncrementer();
+increment(7)

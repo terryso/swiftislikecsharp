@@ -1,0 +1,3 @@
+public Tuple<double, double, double> getGasPrices() {
+    return Tuple.Create(3.59, 3.69, 3.79);
+}

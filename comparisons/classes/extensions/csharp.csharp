@@ -1,0 +1,28 @@
+public static class DoubleExtension {
+    public static double km(this double number) {
+        return number * 1000.0;
+    }
+
+    public static double m(this double number) {
+        return number;
+    }
+
+    public static double cm(this double number) {
+        return number / 100.0;
+    }
+
+    public static double mm(this double number) {
+        return number / 1000.0;
+    }
+
+    public static double ft(this double number) {
+        return number / 3.28084;
+    }
+}
+
+val oneInch = (25.4).mm();
+Console.WriteLine("One inch is {0} meters", oneInch);
+// prints "One inch is 0.0254 meters"
+var threeFeet = (3.0).ft();
+Console.WriteLine("Three feet is {0} meters", threeFeet);
+// prints "Three feet is 0.914399970739201 meters"

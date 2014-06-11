@@ -1,0 +1,7 @@
+interface Nameable {
+    string name();
+}
+
+public void f<T>(T x) where T : Nameable {
+    Console.WriteLine("Name is " + x.name());
+}

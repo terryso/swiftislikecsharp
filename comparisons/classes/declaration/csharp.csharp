@@ -1,0 +1,6 @@
+class Shape {
+    public int numberOfSides { get; set; }
+    public string simpleDescription() {
+        return string.Format("A shape with {0} sides.", numberOfSides);
+    }
+}

@@ -1,0 +1,4 @@
+public string greet(string name, string day) {
+    return string.Format("Hello {0}, today is {1}.", name, day);
+}
+greet("Bob", "Tuesday");

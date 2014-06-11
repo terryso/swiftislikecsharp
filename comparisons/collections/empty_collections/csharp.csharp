@@ -1,0 +1,3 @@
+var emptyArray = new String[] {};
+var emptyDictionary = new Dictionary<String, float>();
+var emptyArrayNoType = new ArrayList();

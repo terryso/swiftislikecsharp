@@ -1,0 +1,5 @@
+public int area(int width, int height) {
+    return width * height;
+}
+
+area(width:10, height:10);

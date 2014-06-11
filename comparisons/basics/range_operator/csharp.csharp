@@ -1,0 +1,9 @@
+var names = new[] {"Anna", "Alex", "Brian", "Jack"};
+var count = names.Length;
+foreach (var i in Enumerable.Range(0, count)) {
+    Console.WriteLine("Person {0} is called {1}", i + 1, names[i]);
+}
+// Person 1 is called Anna
+// Person 2 is called Alex
+// Person 3 is called Brian
+// Person 4 is called Jack
