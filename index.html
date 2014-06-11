@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <title>Swift is a lot like Scala</title>
+  <title>Swift is a lot like C#</title>
   <meta name="description" content="Examples of how Apple's Swift language is similar to Scala.">
   <link rel="stylesheet" href="css/prism.css">
   <link rel="stylesheet" href="css/index.css">
@@ -14,24 +14,17 @@
   <script src="js/prism.js"></script>
   <script src="js/index.js"></script>
 </head>
-<body><a href="https://github.com/leverich/swiftislikescala"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
+<body><a href="https://github.com/terryso/swiftislikecsharp"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
   <div class="page">
     <header class="page-header">
       <div class="inner">
-        <h1>Swift is a lot like Scala</h1>
+        <h1>Swift is a lot like C#</h1>
       </div>
     </header>
     <div class="explanation">
       <div class="inner">
-        <p>A new programming language called <a href="https://developer.apple.com/swift/">Swift</a> was announced at WWDC'14. Here's a source-to-source comparison of Swift and <a href="http://www.scala-lang.org/">Scala</a> using the <a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/GuidedTour.html">examples</a> given in "The Swift Programming Language" book published by Apple in the iTunes Store.</p>
-        <p>I suspect the two are related ;-) Syntacticly, it's fair to say that Swift is a dialect of Scala. Swift inherits from Scala most of the "banner" features listed by Apple: Type Inference, Closures, Tuples, Protocols, Extensions, Generics, Read-Eval-Print-Loop, etc.</p>
-        <p>
-          Despite their syntactic similarity, Swift's runtime environment is quite distinct from Scala's, and is perhaps the most interesting aspect of the new language.
-          Scala compiles to the JVM, uses garbage collection, and its object model transparently integrates with Java.
-          Swift compiles to native code, uses automatic reference counting, and its object model transparently integrates with Objective-C.
-          Thus, the similarity between the two languages does not extend much below the surface.
-        </p>
-        <p><a href="https://github.com/densh/talks/">Den Shabalin</a> provides another excellent <a href="http://www.scribd.com/doc/227879724/Swift-vs-Scala-2-11">point-by-point comparison</a>.</p>
+        <p>A new programming language called <a href="https://developer.apple.com/swift/">Swift</a> was announced at WWDC'14. Here's a source-to-source comparison of Swift and <a href="http://www.scala-lang.org/">C#</a> using the <a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/GuidedTour.html">examples</a> given in "The Swift Programming Language" book published by Apple in the iTunes Store.</p>
+        <p><a href="https://github.com/leverich/">Jacob Leverich</a> provides another excellent <a href="https://leverich.github.io/swiftislikescala/">point-by-point comparison with <a href="http://www.scala-lang.org/">Scala</a></a>.</p>
       </div>
     </div>
     <header class="search">
@@ -46,15 +39,15 @@
             <h3><a href="#hello_world">Hello World</a></h3>
             <div data-browser="swift" class="browser swift">
               <h4>SWIFT</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>println(&quot;Hello, world!&quot;)
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>println(&quot;Hello, world!&quot;)
 </code></pre>
               </div>
             </div>
-            <div data-browser="scala" class="browser scala">
-              <h4>SCALA</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>println(&quot;Hello, world!&quot;)
+            <div data-browser="csharp" class="browser csharp">
+              <h4>CSHARP</h4>
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>Console.WriteLine(&quot;Hello, world!&quot;);
 </code></pre>
               </div>
             </div>
@@ -63,19 +56,19 @@
             <h3><a href="#variables_and_constants">Variables And Constants</a></h3>
             <div data-browser="swift" class="browser swift">
               <h4>SWIFT</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>var myVariable = 42
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>var myVariable = 42
 myVariable = 50
 let myConstant = 42
 </code></pre>
               </div>
             </div>
-            <div data-browser="scala" class="browser scala">
-              <h4>SCALA</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>var myVariable = 42
-myVariable = 50
-val myConstant = 42
+            <div data-browser="csharp" class="browser csharp">
+              <h4>CSHARP</h4>
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>var myVariable = 42;
+myVariable = 50;
+const int myConstant = 42;
 </code></pre>
               </div>
             </div>
@@ -84,15 +77,15 @@ val myConstant = 42
             <h3><a href="#explicit_types">Explicit Types</a></h3>
             <div data-browser="swift" class="browser swift">
               <h4>SWIFT</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>let explicitDouble: Double = 70
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>let explicitDouble: Double = 70
 </code></pre>
               </div>
             </div>
-            <div data-browser="scala" class="browser scala">
-              <h4>SCALA</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>val explicitDouble: Double = 70
+            <div data-browser="csharp" class="browser csharp">
+              <h4>CSHARP</h4>
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>const double explicitDouble = 70;
 </code></pre>
               </div>
             </div>
@@ -101,19 +94,19 @@ val myConstant = 42
             <h3><a href="#type_coercion">Type Coercion</a></h3>
             <div data-browser="swift" class="browser swift">
               <h4>SWIFT</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>let label = &quot;The width is &quot;
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>let label = &quot;The width is &quot;
 let width = 94
 let widthLabel = label + String(width)
 </code></pre>
               </div>
             </div>
-            <div data-browser="scala" class="browser scala">
-              <h4>SCALA</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>val label = &quot;The width is &quot;
-val width = 94
-val widthLabel = label + width
+            <div data-browser="csharp" class="browser csharp">
+              <h4>CSHARP</h4>
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>var label = &quot;The width is &quot;;
+var width = 94;
+var widthLabel = label + width;
 </code></pre>
               </div>
             </div>
@@ -122,21 +115,21 @@ val widthLabel = label + width
             <h3><a href="#string_interpolation">String Interpolation</a></h3>
             <div data-browser="swift" class="browser swift">
               <h4>SWIFT</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>let apples = 3
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>let apples = 3
 let oranges = 5
 let fruitSummary = &quot;I have \(apples + oranges) &quot; + 
                    &quot;pieces of fruit.&quot;
 </code></pre>
               </div>
             </div>
-            <div data-browser="scala" class="browser scala">
-              <h4>SCALA</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>val apples = 3
-val oranges = 5
-val fruitSummary = s&quot;I have ${apples + oranges} &quot; +
-                   &quot; pieces of fruit.&quot;
+            <div data-browser="csharp" class="browser csharp">
+              <h4>CSHARP</h4>
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>var apples = 3;
+var oranges = 5;
+var fruitSummary = String.Format(&quot;I have {0} + {1} &quot; +
+                          &quot;pieces of fruit.&quot;, apples, oranges);
 </code></pre>
               </div>
             </div>
@@ -145,8 +138,8 @@ val fruitSummary = s&quot;I have ${apples + oranges} &quot; +
             <h3><a href="#range_operator">Range Operator</a></h3>
             <div data-browser="swift" class="browser swift">
               <h4>SWIFT</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>let names = [&quot;Anna&quot;, &quot;Alex&quot;, &quot;Brian&quot;, &quot;Jack&quot;]
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>let names = [&quot;Anna&quot;, &quot;Alex&quot;, &quot;Brian&quot;, &quot;Jack&quot;]
 let count = names.count
 for i in 0..count {
     println(&quot;Person \(i + 1) is called \(names[i])&quot;)
@@ -158,13 +151,13 @@ for i in 0..count {
 </code></pre>
               </div>
             </div>
-            <div data-browser="scala" class="browser scala">
-              <h4>SCALA</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>val names = Array(&quot;Anna&quot;, &quot;Alex&quot;, &quot;Brian&quot;, &quot;Jack&quot;)
-val count = names.length
-for (i &lt;- 0 until count) {
-    println(s&quot;Person ${i + 1} is called ${names(i)}&quot;)
+            <div data-browser="csharp" class="browser csharp">
+              <h4>CSHARP</h4>
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>var names = new[] {&quot;Anna&quot;, &quot;Alex&quot;, &quot;Brian&quot;, &quot;Jack&quot;};
+var count = names.Length;
+foreach (var i in Enumerable.Range(0, count)) {
+    Console.WriteLine(&quot;Person {0} is called {1}&quot;, i + 1, names[i]);
 }
 // Person 1 is called Anna
 // Person 2 is called Alex
@@ -178,8 +171,8 @@ for (i &lt;- 0 until count) {
             <h3><a href="#inclusive_range_operator">Inclusive Range Operator</a></h3>
             <div data-browser="swift" class="browser swift">
               <h4>SWIFT</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>for index in 1...5 {
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>for index in 1...5 {
     println(&quot;\(index) times 5 is \(index * 5)&quot;)
 }
 // 1 times 5 is 5
@@ -190,11 +183,11 @@ for (i &lt;- 0 until count) {
 </code></pre>
               </div>
             </div>
-            <div data-browser="scala" class="browser scala">
-              <h4>SCALA</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>for (index &lt;- 1 to 5) {
-    println(s&quot;$index times 5 is ${index * 5}&quot;)
+            <div data-browser="csharp" class="browser csharp">
+              <h4>CSHARP</h4>
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>foreach (var index in Enumerable.Range(1, 5)) {
+    Console.WriteLine(&quot;{0} times 5 is {1}&quot;, index, index * 5);
 }
 // 1 times 5 is 5
 // 2 times 5 is 10
@@ -214,19 +207,18 @@ for (i &lt;- 0 until count) {
             <h3><a href="#arrays">Arrays</a></h3>
             <div data-browser="swift" class="browser swift">
               <h4>SWIFT</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>var shoppingList = [&quot;catfish&quot;, &quot;water&quot;,
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>var shoppingList = [&quot;catfish&quot;, &quot;water&quot;,
     &quot;tulips&quot;, &quot;blue paint&quot;]
 shoppingList[1] = &quot;bottle of water&quot;
 </code></pre>
               </div>
             </div>
-            <div data-browser="scala" class="browser scala">
-              <h4>SCALA</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>var shoppingList = Array(&quot;catfish&quot;,
-    &quot;water&quot;, &quot;tulips&quot;, &quot;blue paint&quot;)
-shoppingList(1) = &quot;bottle of water&quot;
+            <div data-browser="csharp" class="browser csharp">
+              <h4>CSHARP</h4>
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>var shoppingList = new[]{&quot;catfish&quot;, &quot;water&quot;, &quot;tulips&quot;, &quot;blue paint&quot;};
+shoppingList[1] = &quot;bottle of water&quot;;
 </code></pre>
               </div>
             </div>
@@ -235,8 +227,8 @@ shoppingList(1) = &quot;bottle of water&quot;
             <h3><a href="#maps">Maps</a></h3>
             <div data-browser="swift" class="browser swift">
               <h4>SWIFT</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>var occupations = [
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>var occupations = [
     &quot;Malcolm&quot;: &quot;Captain&quot;,
     &quot;Kaylee&quot;: &quot;Mechanic&quot;,
 ]
@@ -244,14 +236,15 @@ occupations[&quot;Jayne&quot;] = &quot;Public Relations&quot;
 </code></pre>
               </div>
             </div>
-            <div data-browser="scala" class="browser scala">
-              <h4>SCALA</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>var occupations = scala.collection.mutable.Map(
-    &quot;Malcolm&quot; -&gt; &quot;Captain&quot;,
-    &quot;Kaylee&quot; -&gt; &quot;Mechanic&quot;
-)
-occupations(&quot;Jayne&quot;) = &quot;Public Relations&quot;
+            <div data-browser="csharp" class="browser csharp">
+              <h4>CSHARP</h4>
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>var occupations = new Dictionary&lt;string, string&gt; 
+                                  {
+                                      {&quot;Malcolm&quot;, &quot;Captain&quot;},
+                                      {&quot;Kaylee&quot;, &quot;Mechanic&quot;}
+                                  };
+occupations[&quot;Jayne&quot;] = &quot;Public Relations&quot;;
 </code></pre>
               </div>
             </div>
@@ -260,19 +253,19 @@ occupations(&quot;Jayne&quot;) = &quot;Public Relations&quot;
             <h3><a href="#empty_collections">Empty Collections</a></h3>
             <div data-browser="swift" class="browser swift">
               <h4>SWIFT</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>let emptyArray = String[]()
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>let emptyArray = String[]()
 let emptyDictionary = Dictionary&lt;String, Float&gt;()
 let emptyArrayNoType = []
 </code></pre>
               </div>
             </div>
-            <div data-browser="scala" class="browser scala">
-              <h4>SCALA</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>val emptyArray = Array[String]()
-val emptyDictionary = Map[String, Float]()
-val emptyArrayNoType = Array()
+            <div data-browser="csharp" class="browser csharp">
+              <h4>CSHARP</h4>
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>var emptyArray = new String[] {};
+var emptyDictionary = new Dictionary&lt;String, float&gt;();
+var emptyArrayNoType = new ArrayList();
 </code></pre>
               </div>
             </div>
@@ -286,21 +279,21 @@ val emptyArrayNoType = Array()
             <h3><a href="#functions">Functions</a></h3>
             <div data-browser="swift" class="browser swift">
               <h4>SWIFT</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>func greet(name: String, day: String) -&gt; String {
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>func greet(name: String, day: String) -&gt; String {
     return &quot;Hello \(name), today is \(day).&quot;
 }
 greet(&quot;Bob&quot;, &quot;Tuesday&quot;)
 </code></pre>
               </div>
             </div>
-            <div data-browser="scala" class="browser scala">
-              <h4>SCALA</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>def greet(name: String, day: String): String = {
-    return s&quot;Hello $name, today is $day.&quot;
+            <div data-browser="csharp" class="browser csharp">
+              <h4>CSHARP</h4>
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>public string greet(string name, string day) {
+    return string.Format(&quot;Hello {0}, today is {1}.&quot;, name, day);
 }
-greet(&quot;Bob&quot;, &quot;Tuesday&quot;)
+greet(&quot;Bob&quot;, &quot;Tuesday&quot;);
 </code></pre>
               </div>
             </div>
@@ -309,18 +302,18 @@ greet(&quot;Bob&quot;, &quot;Tuesday&quot;)
             <h3><a href="#tuple_return">Tuple Return</a></h3>
             <div data-browser="swift" class="browser swift">
               <h4>SWIFT</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>func getGasPrices() -&gt; (Double, Double, Double) {
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>func getGasPrices() -&gt; (Double, Double, Double) {
     return (3.59, 3.69, 3.79)
 }
 </code></pre>
               </div>
             </div>
-            <div data-browser="scala" class="browser scala">
-              <h4>SCALA</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>def getGasPrices(): (Double, Double, Double) = {
-    return (3.59, 3.69, 3.79)
+            <div data-browser="csharp" class="browser csharp">
+              <h4>CSHARP</h4>
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>public Tuple&lt;double, double, double&gt; getGasPrices() {
+    return Tuple.Create(3.59, 3.69, 3.79);
 }
 </code></pre>
               </div>
@@ -330,8 +323,8 @@ greet(&quot;Bob&quot;, &quot;Tuesday&quot;)
             <h3><a href="#variable_number_of_arguments">Variable Number Of Arguments</a></h3>
             <div data-browser="swift" class="browser swift">
               <h4>SWIFT</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>func sumOf(numbers: Int...) -&gt; Int {
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>func sumOf(numbers: Int...) -&gt; Int {
     var sum = 0
     for number in numbers {
         sum += number
@@ -342,15 +335,11 @@ sumOf(42, 597, 12)
 </code></pre>
               </div>
             </div>
-            <div data-browser="scala" class="browser scala">
-              <h4>SCALA</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>def sumOf(numbers: Int*): Int = {
-    var sum = 0
-    for (number &lt;- numbers) {
-        sum += number
-    }
-    return sum
+            <div data-browser="csharp" class="browser csharp">
+              <h4>CSHARP</h4>
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>public int sumOf(params int[] numbers) {
+    return numbers.Sum();
 }
 sumOf(42, 597, 12)
 </code></pre>
@@ -361,8 +350,8 @@ sumOf(42, 597, 12)
             <h3><a href="#function_type">Function Type</a></h3>
             <div data-browser="swift" class="browser swift">
               <h4>SWIFT</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>func makeIncrementer() -&gt; (Int -&gt; Int) {
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>func makeIncrementer() -&gt; (Int -&gt; Int) {
     func addOne(number: Int) -&gt; Int {
         return 1 + number
     }
@@ -373,16 +362,14 @@ increment(7)
 </code></pre>
               </div>
             </div>
-            <div data-browser="scala" class="browser scala">
-              <h4>SCALA</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>def makeIncrementer(): Int =&gt; Int = {
-    def addOne(number: Int): Int = {
-        return 1 + number
-    }
-    return addOne
+            <div data-browser="csharp" class="browser csharp">
+              <h4>CSHARP</h4>
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>public Func&lt;int, int&gt; makeIncrementer() {
+    Func&lt;int, int&gt; addOne = number =&gt; 1 + number;
+    return addOne;
 }
-var increment = makeIncrementer()
+var increment = makeIncrementer();
 increment(7)
 </code></pre>
               </div>
@@ -392,17 +379,17 @@ increment(7)
             <h3><a href="#map">Map</a></h3>
             <div data-browser="swift" class="browser swift">
               <h4>SWIFT</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>var numbers = [20, 19, 7, 12]
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>var numbers = [20, 19, 7, 12]
 numbers.map({ number in 3 * number })
 </code></pre>
               </div>
             </div>
-            <div data-browser="scala" class="browser scala">
-              <h4>SCALA</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>var numbers = Array(20, 19, 7, 12)
-numbers.map( number =&gt; 3 * number )
+            <div data-browser="csharp" class="browser csharp">
+              <h4>CSHARP</h4>
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>var numbers = new[] {20, 19, 7, 12};
+numbers.Select(number =&gt; 3 * number);
 </code></pre>
               </div>
             </div>
@@ -411,15 +398,16 @@ numbers.map( number =&gt; 3 * number )
             <h3><a href="#sort">Sort</a></h3>
             <div data-browser="swift" class="browser swift">
               <h4>SWIFT</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>sort([1, 5, 3, 12, 2]) { $0 &gt; $1 }
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>sort([1, 5, 3, 12, 2]) { $0 &gt; $1 }
 </code></pre>
               </div>
             </div>
-            <div data-browser="scala" class="browser scala">
-              <h4>SCALA</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>Array(1, 5, 3, 12, 2).sortWith(_ &gt; _)
+            <div data-browser="csharp" class="browser csharp">
+              <h4>CSHARP</h4>
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>var list = new List&lt;int&gt; {1, 5, 3, 12, 2};
+list.Sort((x, y) =&gt; Convert.ToInt32((x &gt; y)));
 </code></pre>
               </div>
             </div>
@@ -428,8 +416,8 @@ numbers.map( number =&gt; 3 * number )
             <h3><a href="#named_arguments">Named Arguments</a></h3>
             <div data-browser="swift" class="browser swift">
               <h4>SWIFT</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>def area(width: Int, height: Int) -&gt; Int {
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>def area(width: Int, height: Int) -&gt; Int {
     return width * height
 }
 
@@ -437,14 +425,14 @@ area(width: 10, height: 10)
 </code></pre>
               </div>
             </div>
-            <div data-browser="scala" class="browser scala">
-              <h4>SCALA</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>def area(width: Int, height: Int): Int = {
-    return width * height
+            <div data-browser="csharp" class="browser csharp">
+              <h4>CSHARP</h4>
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>public int area(int width, int height) {
+    return width * height;
 }
 
-area(width = 10, height = 10)
+area(width:10, height:10);
 </code></pre>
               </div>
             </div>
@@ -458,8 +446,8 @@ area(width = 10, height = 10)
             <h3><a href="#declaration">Declaration</a></h3>
             <div data-browser="swift" class="browser swift">
               <h4>SWIFT</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>class Shape {
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>class Shape {
     var numberOfSides = 0
     func simpleDescription() -&gt; String {
         return &quot;A shape with \(numberOfSides) sides.&quot;
@@ -468,13 +456,13 @@ area(width = 10, height = 10)
 </code></pre>
               </div>
             </div>
-            <div data-browser="scala" class="browser scala">
-              <h4>SCALA</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>class Shape {
-    var numberOfSides = 0
-    def simpleDescription(): String = {
-        return s&quot;A shape with $numberOfSides sides.&quot;
+            <div data-browser="csharp" class="browser csharp">
+              <h4>CSHARP</h4>
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>class Shape {
+    public int numberOfSides { get; set; }
+    public string simpleDescription() {
+        return string.Format(&quot;A shape with {0} sides.&quot;, numberOfSides);
     }
 }
 </code></pre>
@@ -485,19 +473,19 @@ area(width = 10, height = 10)
             <h3><a href="#usage">Usage</a></h3>
             <div data-browser="swift" class="browser swift">
               <h4>SWIFT</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>var shape = Shape()
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>var shape = Shape()
 shape.numberOfSides = 7
 var shapeDescription = shape.simpleDescription()
 </code></pre>
               </div>
             </div>
-            <div data-browser="scala" class="browser scala">
-              <h4>SCALA</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>var shape = new Shape()
-shape.numberOfSides = 7
-var shapeDescription = shape.simpleDescription()
+            <div data-browser="csharp" class="browser csharp">
+              <h4>CSHARP</h4>
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>var shape = new Shape();
+shape.numberOfSides = 7;
+var shapeDescription = shape.simpleDescription();
 </code></pre>
               </div>
             </div>
@@ -506,8 +494,8 @@ var shapeDescription = shape.simpleDescription()
             <h3><a href="#subclass">Subclass</a></h3>
             <div data-browser="swift" class="browser swift">
               <h4>SWIFT</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>class NamedShape {
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>class NamedShape {
     var numberOfSides: Int = 0
     var name: String
 
@@ -545,28 +533,43 @@ test.simpleDescription()
 </code></pre>
               </div>
             </div>
-            <div data-browser="scala" class="browser scala">
-              <h4>SCALA</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>class NamedShape(var name: String) {
-    var numberOfSides: Int = 0
+            <div data-browser="csharp" class="browser csharp">
+              <h4>CSHARP</h4>
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>class NamedShape {
+    public int numberOfSides { get; set; }
+    public string name { get; set; }
 
-    def simpleDescription() =
-        s&quot;A shape with $numberOfSides sides.&quot;
+    public NamedShape(string name) {
+        this.name = name;
+    }
+
+    public virtual string simpleDescription() {
+        return string.Format(&quot;A shape with {0} sides.&quot;,
+                              numberOfSides);
+    }
 }
 
-class Square(var sideLength: Double, name: String)
-    extends NamedShape(name) {
-    numberOfSides = 4
-    def area() = sideLength * sideLength
+class Square : NamedShape {
+    public double sideLength { get; set; }
+    public Square(double sideLength, string name) : base(name) {
+        this.sideLength = sideLength;
+        this.numberOfSides = 4;
+    }
 
-    override def simpleDescription() =
-        s&quot;A square with sides of length $sideLength.&quot;
+    public double area() {
+        return sideLength * sideLength;
+    }
+
+    public override string simpleDescription() {
+        return string.Format(&quot;A square with sides of length {0}.&quot;,
+                              sideLength);
+    }
 }
 
-val test = new Square(5.2, &quot;my test square&quot;)
-test.area()
-test.simpleDescription()
+val test = new Square(5.2, &quot;my test square&quot;);
+test.area();
+test.simpleDescription();
 </code></pre>
               </div>
             </div>
@@ -575,8 +578,8 @@ test.simpleDescription()
             <h3><a href="#checking_type">Checking Type</a></h3>
             <div data-browser="swift" class="browser swift">
               <h4>SWIFT</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>var movieCount = 0
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>var movieCount = 0
 var songCount = 0
  
 for item in library {
@@ -589,17 +592,17 @@ for item in library {
 </code></pre>
               </div>
             </div>
-            <div data-browser="scala" class="browser scala">
-              <h4>SCALA</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>var movieCount = 0
-var songCount = 0
- 
-for (item &lt;- library) {
-    if (item.isInstanceOf[Movie]) {
-        movieCount += 1
-    } else if (item.isInstanceOf[Song]) {
-        songCount += 1
+            <div data-browser="csharp" class="browser csharp">
+              <h4>CSHARP</h4>
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>var movieCount = 0;
+var songCount = 0;
+
+foreach (var item in library) {
+    if (item is Movie) {
+        ++movieCount;
+    } else if (item is Song) {
+        ++songCount;
     }
 }
 </code></pre>
@@ -610,20 +613,23 @@ for (item &lt;- library) {
             <h3><a href="#downcasting">Downcasting</a></h3>
             <div data-browser="swift" class="browser swift">
               <h4>SWIFT</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>for object in someObjects {
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>for object in someObjects {
     let movie = object as Movie
     println(&quot;Movie: '\(movie.name)', dir. \(movie.director)&quot;)
 }
 </code></pre>
               </div>
             </div>
-            <div data-browser="scala" class="browser scala">
-              <h4>SCALA</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>for (obj &lt;- someObjects) {
-    val movie = obj.asInstanceOf[Movie]
-    println(s&quot;Movie: '${movie.name}', dir. ${movie.director}&quot;)
+            <div data-browser="csharp" class="browser csharp">
+              <h4>CSHARP</h4>
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>foreach (var obj in someObjects) {
+    var movie = obj as Movie;
+    if (movie != null) {
+        Console.WriteLine(string.Format(&quot;Movie: '{0}', dir. {1}&quot;,
+                          movie.name, movie.director));
+    }
 }
 </code></pre>
               </div>
@@ -633,8 +639,8 @@ for (item &lt;- library) {
             <h3><a href="#protocol">Protocol</a></h3>
             <div data-browser="swift" class="browser swift">
               <h4>SWIFT</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>protocol Nameable {
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>protocol Nameable {
     func name() -&gt; String
 }
 
@@ -644,15 +650,15 @@ func f&lt;T: Nameable&gt;(x: T) {
 </code></pre>
               </div>
             </div>
-            <div data-browser="scala" class="browser scala">
-              <h4>SCALA</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>trait Nameable {
-    def name(): String
+            <div data-browser="csharp" class="browser csharp">
+              <h4>CSHARP</h4>
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>interface Nameable {
+    string name();
 }
 
-def f[T &lt;: Nameable](x: T) = {
-    println(&quot;Name is &quot; + x.name())
+public void f&lt;T&gt;(T x) where T : Nameable {
+    Console.WriteLine(&quot;Name is &quot; + x.name());
 }
 </code></pre>
               </div>
@@ -662,8 +668,8 @@ def f[T &lt;: Nameable](x: T) = {
             <h3><a href="#extensions">Extensions</a></h3>
             <div data-browser="swift" class="browser swift">
               <h4>SWIFT</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>extension Double {
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>extension Double {
     var km: Double { return self * 1_000.0 }
     var m: Double { return self }
     var cm: Double { return self / 100.0 }
@@ -679,26 +685,36 @@ println(&quot;Three feet is \(threeFeet) meters&quot;)
 </code></pre>
               </div>
             </div>
-            <div data-browser="scala" class="browser scala">
-              <h4>SCALA</h4>
-              <div data-lang="scala" class="code-block language-scala">
-                <pre><code>object Extensions {
-    implicit class DoubleUnit(d: Double) {
-        def km: Double = { return d * 1000.0 }
-        def m: Double = { return d }
-        def cm: Double = { return d / 100.0 }
-        def mm: Double = { return d / 1000.0 }
-        def ft: Double = { return d / 3.28084 }
+            <div data-browser="csharp" class="browser csharp">
+              <h4>CSHARP</h4>
+              <div data-lang="csharp" class="code-block language-csharp">
+                <pre class="language-csharp"><code>public static class DoubleExtension {
+    public static double km(this double number) {
+        return number * 1000.0;
+    }
+
+    public static double m(this double number) {
+        return number;
+    }
+
+    public static double cm(this double number) {
+        return number / 100.0;
+    }
+
+    public static double mm(this double number) {
+        return number / 1000.0;
+    }
+
+    public static double ft(this double number) {
+        return number / 3.28084;
     }
 }
 
-import Extensions.DoubleUnit
-
-val oneInch = 25.4.mm
-println(s&quot;One inch is $oneInch meters&quot;)
+val oneInch = (25.4).mm();
+Console.WriteLine(&quot;One inch is {0} meters&quot;, oneInch);
 // prints &quot;One inch is 0.0254 meters&quot;
-val threeFeet = 3.ft
-println(s&quot;Three feet is $threeFeet meters&quot;)
+var threeFeet = (3.0).ft();
+Console.WriteLine(&quot;Three feet is {0} meters&quot;, threeFeet);
 // prints &quot;Three feet is 0.914399970739201 meters&quot;
 </code></pre>
               </div>
@@ -707,11 +723,10 @@ println(s&quot;Three feet is $threeFeet meters&quot;)
         </div>
       </section>
     </div>
-    <footer><p>Shamelessly forked from <a href="http://youmightnotneedjquery.com/">http://youmightnotneedjquery.com/</a>.</footer>
-    <div class="changelog">
-      <p>2014 June 4 - Cleanup of Subclass from Gerald Loeffler.</p>
-      <p>2014 June 4 - Added typecasting, protocols, and extensions.</p>
-    </div>
+    <footer>
+      <p>Shamelessly forked from <a href="http://youmightnotneedjquery.com/">http://youmightnotneedjquery.com/</a>.</p>
+      <p>Follow <a href="http://weibo.com/suchuanyi">@四眼蒙面侠</a>.</p>
+    </footer>
   </div>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
