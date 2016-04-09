@@ -689,25 +689,11 @@ println(&quot;Three feet is \(threeFeet) meters&quot;)
               <h4>CSHARP</h4>
               <div data-lang="csharp" class="code-block language-csharp">
                 <pre class="language-csharp"><code>public static class DoubleExtension {
-    public static double km(this double number) {
-        return number * 1000.0;
-    }
-
-    public static double m(this double number) {
-        return number;
-    }
-
-    public static double cm(this double number) {
-        return number / 100.0;
-    }
-
-    public static double mm(this double number) {
-        return number / 1000.0;
-    }
-
-    public static double ft(this double number) {
-        return number / 3.28084;
-    }
+		public static double km(this double number) => number * 1000.0;
+		public static double m(this double number) => number;
+		public static double cm(this double number) => number / 100.0;
+		public static double mm(this double number) => number / 1000.0;
+		public static double ft(this double number) => number / 3.28084;
 }
 
 val oneInch = (25.4).mm();
