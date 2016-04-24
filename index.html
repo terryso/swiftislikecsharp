@@ -128,8 +128,8 @@ let fruitSummary = &quot;I have \(apples + oranges) &quot; +
               <div data-lang="csharp" class="code-block language-csharp">
                 <pre class="language-csharp"><code>var apples = 3;
 var oranges = 5;
-var fruitSummary = String.Format(&quot;I have {0} + {1} &quot; +
-                          &quot;pieces of fruit.&quot;, apples, oranges);
+var fruitSummary = $&quot;I have {apples + oranges} &quot; + 
+                    &quot;pieces of fruit.&quot;
 </code></pre>
               </div>
             </div>
@@ -157,7 +157,7 @@ for i in 0..count {
                 <pre class="language-csharp"><code>var names = new[] {&quot;Anna&quot;, &quot;Alex&quot;, &quot;Brian&quot;, &quot;Jack&quot;};
 var count = names.Length;
 foreach (var i in Enumerable.Range(0, count)) {
-    Console.WriteLine(&quot;Person {0} is called {1}&quot;, i + 1, names[i]);
+    Console.WriteLine($&quot;Person {i + 1} is called {names[i]}&quot;);
 }
 // Person 1 is called Anna
 // Person 2 is called Alex
@@ -187,7 +187,7 @@ foreach (var i in Enumerable.Range(0, count)) {
               <h4>CSHARP</h4>
               <div data-lang="csharp" class="code-block language-csharp">
                 <pre class="language-csharp"><code>foreach (var index in Enumerable.Range(1, 5)) {
-    Console.WriteLine(&quot;{0} times 5 is {1}&quot;, index, index * 5);
+    Console.WriteLine($&quot;{index} times 5 is {index * 5}&quot;);
 }
 // 1 times 5 is 5
 // 2 times 5 is 10
@@ -291,7 +291,7 @@ greet(&quot;Bob&quot;, &quot;Tuesday&quot;)
               <h4>CSHARP</h4>
               <div data-lang="csharp" class="code-block language-csharp">
                 <pre class="language-csharp"><code>public string greet(string name, string day) {
-    return string.Format(&quot;Hello {0}, today is {1}.&quot;, name, day);
+    return $&quot;Hello {name}, today is {day}.&quot;;
 }
 greet(&quot;Bob&quot;, &quot;Tuesday&quot;);
 </code></pre>
@@ -462,7 +462,7 @@ area(width:10, height:10);
                 <pre class="language-csharp"><code>class Shape {
     public int numberOfSides { get; set; }
     public string simpleDescription() {
-        return string.Format(&quot;A shape with {0} sides.&quot;, numberOfSides);
+        return $&quot;A shape with {numberOfSides} sides.&quot;;
     }
 }
 </code></pre>
@@ -545,8 +545,7 @@ test.simpleDescription()
     }
 
     public virtual string simpleDescription() {
-        return string.Format(&quot;A shape with {0} sides.&quot;,
-                              numberOfSides);
+        return $&quot;A shape with {numberOfSides} sides.&quot;;
     }
 }
 
@@ -562,8 +561,7 @@ class Square : NamedShape {
     }
 
     public override string simpleDescription() {
-        return string.Format(&quot;A square with sides of length {0}.&quot;,
-                              sideLength);
+        return $&quot;A square with sides of length {sideLength}.&quot;;
     }
 }
 
@@ -627,8 +625,7 @@ foreach (var item in library) {
                 <pre class="language-csharp"><code>foreach (var obj in someObjects) {
     var movie = obj as Movie;
     if (movie != null) {
-        Console.WriteLine(string.Format(&quot;Movie: '{0}', dir. {1}&quot;,
-                          movie.name, movie.director));
+        Console.WriteLine($&quot;Movie: '{movie.name}', dir. {movie.director}&quot;);
     }
 }
 </code></pre>
@@ -711,10 +708,10 @@ println(&quot;Three feet is \(threeFeet) meters&quot;)
 }
 
 val oneInch = (25.4).mm();
-Console.WriteLine(&quot;One inch is {0} meters&quot;, oneInch);
+Console.WriteLine($&quot;One inch is {oneInch} meters&quot;);
 // prints &quot;One inch is 0.0254 meters&quot;
 var threeFeet = (3.0).ft();
-Console.WriteLine(&quot;Three feet is {0} meters&quot;, threeFeet);
+Console.WriteLine($&quot;Three feet is {threeFeet} meters&quot;);
 // prints &quot;Three feet is 0.914399970739201 meters&quot;
 </code></pre>
               </div>
