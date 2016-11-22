@@ -1,6 +1,6 @@
 for object in someObjects {
     guard let movie = object as Movie else {
-        return
+        continue
     }
     println("Movie: '\(movie.name)', dir. \(movie.director)")
 }
