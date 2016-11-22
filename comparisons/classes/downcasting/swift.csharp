@@ -1,4 +1,6 @@
 for object in someObjects {
-    let movie = object as Movie
+    guard let movie = object as Movie else {
+        return
+    }
     println("Movie: '\(movie.name)', dir. \(movie.director)")
 }
