@@ -1,7 +1,6 @@
 foreach (var obj in someObjects) {
     var movie = obj as Movie;
     if (movie != null) {
-        Console.WriteLine(string.Format("Movie: '{0}', dir. {1}",
-                          movie.name, movie.director));
+        Console.WriteLine($"Movie: '{movie.name}', dir. {movie.director}");
     }
 }
